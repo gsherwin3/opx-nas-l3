@@ -21,7 +21,6 @@
  * \author Satish Mynam/Prince Sunny
  */
 
-#define GASHACK
 #include "hal_rt_main.h"
 #include "hal_rt_route.h"
 #include "hal_rt_util.h"
@@ -193,11 +192,7 @@ t_std_error hal_form_nbr_entry(ndi_neighbor_t *p_nbr_entry, t_fib_nh *p_nh)
 
 }
 
-#ifdef GASHACK
 static inline void hal_dump_nbr_entry(ndi_neighbor_t *p_nbr_entry)
-#else
-inline void hal_dump_nbr_entry(ndi_neighbor_t *p_nbr_entry)
-#endif
 
 {
     char           p_buf[HAL_RT_MAX_BUFSZ];
